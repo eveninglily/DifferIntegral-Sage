@@ -6,6 +6,13 @@ from sage.functions.other import ceil
 from sage.symbolic.assumptions import assume
 
 def differ_integral(func, variable, order):
+    """Takes the fractional derivative or intergral.
+
+    Keyword arguments:
+    func -- Function to operate on
+    variable -- The variable to act with respect to
+    order -- The order to integrate or differentiate to. Positive values are derivatives, negative are integrals.
+    """
     maxima('keepfloat: false')
     if order == 0:
         return func
