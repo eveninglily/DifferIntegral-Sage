@@ -1,1 +1,1 @@
-from .differintegral import differ_integrate
+from .differintegral import differ_integral

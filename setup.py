@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="differintegral_sage",
-    version="0.0.1",
+    version="1.0.0",
     author="Evan McIntire",
     author_email="mcintire.evan@gmail.com",
     description="SageMath Implementation of Riemann–Liouville DifferIntegral Operator",
