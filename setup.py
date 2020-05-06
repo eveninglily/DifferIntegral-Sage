@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="differintegral-sage-McIntireEvan",
+    name="differintegral_sage",
     version="0.0.1",
     author="Evan McIntire",
     author_email="mcintire.evan@gmail.com",

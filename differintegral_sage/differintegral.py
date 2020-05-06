@@ -1,7 +1,5 @@
 from sage.symbolic.integration.integral import definite_integral
 
-__all__ = ["differ_integrate"]
-
 def differ_integrate(f, x, alpha):
     sage.calculus.calculus.maxima('keepfloat: false')
     if alpha == 0:
