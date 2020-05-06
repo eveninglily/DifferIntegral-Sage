@@ -1,13 +1,18 @@
+from sage.calculus.functional import derivative
+from sage.calculus.calculus import maxima
+from sage.all import var, gamma
 from sage.symbolic.integration.integral import definite_integral
+from sage.functions.other import ceil
+from sage.symbolic.assumptions import assume
 
-def differ_integrate(f, x, alpha):
-    sage.calculus.calculus.maxima('keepfloat: false')
-    if alpha == 0:
-        return f
-    elif alpha > 0:
-        ca = ceil(alpha)
-        return derivative(DI(f, x, -(ca - alpha)), x, ca)
+def differintegral(func, variable, order):
+    maxima('keepfloat: false')
+    if order == 0:
+        return func
+    elif order > 0:
+        new_order = ceil(order)
+        return derivative(differintegral(func, variable, -(new_order - order)), variable, new_order)
     else:
         t = var('t')
-        assume(x > 0)
-        return (1/gamma(-alpha)) * definite_integral(f(t)*(x-t)^(-alpha - 1), t, 0, x)
+        assume(variable > 0)
+        return (1/gamma(-order)) * definite_integral(func.subs(variable=t)*(variable-t)**(-order - 1), t, 0, variable)
