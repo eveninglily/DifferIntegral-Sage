@@ -20,6 +20,7 @@ differ_integral(x**2 + 3, x, 1.5)
 ## Arguments
 
 Keyword arguments:
-func -- Function to operate on
-variable -- The variable to act with respect to
-order -- The order to integrate or differentiate to. Positive values are derivatives, negative are integrals.
+
+- func -- Function to operate on
+- variable -- The variable to act with respect to
+- order -- The order to integrate or differentiate to. Positive values are derivatives, negative are integrals.
